@@ -18,7 +18,7 @@
  *   </div>
  *
  *   $(document).ready(function () {
- *       $.karusell({
+ *       $.karussell({
  *           id: "carousel",
  *           wrapper: "carousel-wrapper",
  *           prev: "carousel-prev",
