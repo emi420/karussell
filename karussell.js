@@ -7,8 +7,7 @@
  *
  * Usage:
  *
- *   <div id="carousel-wrapper" class="carousel-wrapper">
- *    
+ *   <div id="carousel-wrapper" class="carousel-wrapper">    
  *     <a id="carousel-prev" class="carousel-prev" href="#prev">Prev</a>
  *     <a id="carousel-next" class="carousel-next" href="#next">Next</a> 
  *     <ul id="carousel" class="carousel">
