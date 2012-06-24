@@ -20,12 +20,12 @@
         this.$next = $("#" + options.next);
         this.$container = $("#" + options.id);
         this.$items = {};
-        this.width = this.$container[0].offsetWidth;
         this.$wrapper = $("#" + options.wrapper);
-        this.maxdist = 0;
         this.wrapper = {
             width: this.$wrapper[0].offsetWidth
         }
+        this.maxdist = 0;
+        this.width = 0;
         
         this.init();
     },
@@ -44,9 +44,9 @@
                 fn.right();
             });
             this.$items.each(function(index, obj) {
-                fn.maxdist += obj.offsetWidth;
+                fn.width += obj.offsetWidth;
             });
-
+            this.maxdist = this.wrapper.width - this.width;
         },
 
         left: function() {
@@ -65,7 +65,7 @@
             if ((sum = this.x - DISTANCE) > -this.maxdist) {
                 this.x = sum;
             } else {
-                this.x = -this.maxdist;       
+                this.x = this.maxdist;       
             }
             this.$container.css("marginLeft",this.x + "px");
         },

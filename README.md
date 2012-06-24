@@ -4,6 +4,13 @@ Karussell is licensed under the terms of either the MIT License or the GNU Gener
 
 (c) 2012 Emilio Mariscal
 
+Requirements:
+
+You will need to preload the images in the carousel, so it can calculate the correct width.
+This is a good choice:
+
+https://github.com/desandro/imagesloaded
+
 Usage:
 
 <pre>
