@@ -46,11 +46,12 @@
             this.$items.each(function(index, obj) {
                 fn.width += obj.offsetWidth;
             });
-            this.maxdist = this.wrapper.width - this.width;
+            this.maxdist = this.wrapper.width - this.width - 5;
         },
 
         left: function() {
             var sum;
+           
             if ((sum = this.x + DISTANCE) < 0) {
                 this.x = sum;
             } else {
@@ -62,11 +63,11 @@
         right: function() {
             var sum;
 
-            if ((sum = this.x - DISTANCE) > -this.maxdist) {
+            if ((sum = this.x - DISTANCE) >= this.maxdist) {
                 this.x = sum;
             } else {
-                this.x = this.maxdist;       
-            }
+                this.x = this.maxdist;
+                }
             this.$container.css("marginLeft",this.x + "px");
         },
     }
