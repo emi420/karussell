@@ -66,8 +66,10 @@
             if ((sum = this.x - DISTANCE) >= this.maxdist) {
                 this.x = sum;
             } else {
-                this.x = this.maxdist;
-                }
+                if (this.wrapper.width < this.width)  {                  
+                    this.x = this.maxdist;
+                } 
+            }
             this.$container.css("marginLeft",this.x + "px");
         },
     }
